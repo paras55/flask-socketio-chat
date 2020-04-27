@@ -15,13 +15,13 @@ $(document).ready(function() {
 	});
 
 	socket.on('message', function(msg) {
-		$("#messages").append('<li>'+msg+'</li>');
+		$("#messages").append('<li>'+msg+'</li>');    //meaning not understood
 		
 	});
 
 	$('#sendbutton').on('click', function() {
-		socket.send($('#myMessage').val());
-		$('#myMessage').val('');
+		socket.send($('#myMessage').val());		//meaning not understood
+		$('#myMessage').val('');			//meaning not understood
 	});
 
 });
