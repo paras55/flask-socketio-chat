@@ -18,8 +18,9 @@ def hello():
 
 @socketio.on('message')
 def handleMessage(msg):
-	print('Message: ' + msg)
-	send(msg, broadcast=True)
+	print('Message: ' + msg) # this message is printed in server of colab 
+	ok='message received'
+	send(ok, broadcast=True) # this ok is printed in chatbox , whatever you send from here is printed in chat
 
 if __name__ == '__main__':
   app.run()
