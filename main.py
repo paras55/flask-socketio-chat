@@ -1,12 +1,19 @@
-from flask import Flask 
+from flask import Flask, render_template
+from flask_socketio import SocketIO, emit,send
 from flask_ngrok import run_with_ngrok
 
-from flask_socketio import SocketIO, send
+# https://flask-socketio.readthedocs.io/en/latest/
+# https://github.com/socketio/socket.io-client
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'mysecret'
-socketio = SocketIO(app)
 run_with_ngrok(app) 
+
+app.config[ 'SECRET_KEY' ] = 'jsbcfsbfjefebw237u3gdbdc'
+socketio = SocketIO( app )
+
+@app.route( '/' )
+def hello():
+  return render_template( './ChatApp.html' )
 
 
 @socketio.on('message')
@@ -15,5 +22,6 @@ def handleMessage(msg):
 	send(msg, broadcast=True)
 
 if __name__ == '__main__':
-	socketio.run( app, debug = True )
-  	app.run()
+  app.run()
+  socketio.run( app, debug = True )
+  
