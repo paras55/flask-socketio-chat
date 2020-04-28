@@ -26,9 +26,9 @@ def handleMessage(msg):
            send("fck you")
 
 		
-	'''print('Message: ' + msg) # this message is printed in server of colab 
-	ok='message received'
-	send(ok, broadcast=True) # this ok is printed in chatbox , whatever you send from here is printed in chat'''
+	#'''print('Message: ' + msg) # this message is printed in server of colab 
+	#ok='message received'
+	#send(ok, broadcast=True) # this ok is printed in chatbox , whatever you send from here is printed in chat'''
 
 if __name__ == '__main__':
   app.run()
