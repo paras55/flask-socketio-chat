@@ -18,10 +18,11 @@ def hello():
 
 @socketio.on('message')
 def handleMessage(msg):
+	
 	#print('Message: ' + msg)
-  	if msg=='hey':
+	if (msg=='hey'):
 		send("hiiiiiiii")
- 	 else:
+ 	else :
     		send("fck you")
 
 		
