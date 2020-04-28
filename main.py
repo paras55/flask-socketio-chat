@@ -20,10 +20,10 @@ def hello():
 def handleMessage(msg):
 	
 	#print('Message: ' + msg)
-	if (msg=='hey'):
-		send("hiiiiiiii")
- 	else :
-    		send("fck you")
+        if (msg=='hey'):
+           send("hiiiiiiii")
+        else :
+           send("fck you")
 
 		
 	'''print('Message: ' + msg) # this message is printed in server of colab 
